@@ -92,3 +92,12 @@ class Prompt:
             # Construct prompt again
             prompt = self.construct_prompt(request)
         return prompt
+
+api_token = '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'
+chatgpt = Chatbot(api_token)
+answer = chatgpt.ask("写一个sql，查询最近3个月所有账户的总展现和总消费。")
+print(answer)
+answer = chatgpt.ask("写一个sql，查询最近3个月所有账户中属于消费行业的账户的总展现和总消费。")
+print(answer)
+answer = chatgpt.ask("上述sql增加分日聚合")
+print(answer)
